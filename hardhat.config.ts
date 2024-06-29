@@ -6,9 +6,8 @@ import type { NetworkUserConfig } from "hardhat/types";
 
 import "./tasks/accounts";
 import "./tasks/myerc20";
+import "./tasks/myerc721";
 
-// import "./tasks/myerc20";
-// import "./tasks/myerc721";
 
 // Run 'npx hardhat vars setup' to see the list of variables that need to be set
 

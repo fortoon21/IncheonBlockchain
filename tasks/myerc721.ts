@@ -1,4 +1,3 @@
-import { ethers } from "hardhat";
 import { task } from "hardhat/config";
 import type { TaskArguments } from "hardhat/types";
 
@@ -18,7 +17,7 @@ task("deploy-erc721", "ERC721 토큰 컨트랙트를 배포합니다.")
       log: true,
     });
 
-    const MyTokenERC721 = (await ethers.getContractFactory("MyTokenERC721")) as MyTokenERC721__factory;
+    const MyTokenERC721 = (await hre.ethers.getContractFactory("MyTokenERC721")) as MyTokenERC721__factory;
     const token = MyTokenERC721.attach(deployment.address);
 
     console.log(`ERC721 토큰 배포됨: `, deployment.address);
